@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace armstrong
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            int n, s=0;
+            string str;
+
+            Console.Write("Enter any number :");
+            str = Console.ReadLine();
+            a = Convert.ToInt32(str);
+
+            int len = str.Length;
+            char []ch = str.ToCharArray();
+
+            for(int i=0; i<len; i++)
+            {
+                n = (int)ch[i];
+                s = s+(n * n * n);
+            }
+            if(a == s)
+            {
+                Console.WriteLine("The number is Armstrong");
+            }
+            else
+            {
+                Console.WriteLine("The number is not Armstrong");
+            }
+        }
+    }
+}
